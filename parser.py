@@ -19,10 +19,14 @@ try:
                     # First time seeing it, start the tally at 1
                     word_counts[clean_word] = 1
 
-        # 4. PRINTING THE REPORT
-        print(f"--- FREQUENCY ANALYSIS REPORT" )
-        for found_word, tally in word_counts.items():
-            print(f"{found_word}: {tally}")
-            
+        # 4. PRINTING THE TOP INVESTIGATION REPORTS
+        print("\n--- TOP 5 MOST FREQUENT COMPLEX WORDS ---")
+
+        # This one line sorts your dictionary by the tally (value) in descending order
+        sorted_report = sorted(word_counts.items(), key=lambda item: item[1], reverse=True)
+
+        for found_word, tally in sorted_report[:5]:
+            print(f"TARGET: {found_word.upper()} | FREQUENCY: {tally}")
+
 except FileNotFoundError:
     print("Error: File not found.")
