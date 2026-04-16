@@ -1,3 +1,11 @@
+# TEMPLATE: Open a file safely
+try:
+    with open('filename.txt', 'r') as file:
+        content = file.read()
+except FileNotFoundError:
+    print("File not found.")
+
+# TEMPLATE: Create an write an intelligence report
 try:
     # 1. READ THE MESSY DATA
     with open("messy_data.txt", 'r') as file:
@@ -35,3 +43,4 @@ try:
 
 except FileNotFoundError:
     print("Error: The file 'messy_data.txt' was not found.")
+
