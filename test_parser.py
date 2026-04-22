@@ -17,5 +17,6 @@ try:
             if len(clean_word) == 4 and clean_word.isdigit():
                 # Tally as a date...
 
+
 except FileNotFoundError:
     print("File not found.")
