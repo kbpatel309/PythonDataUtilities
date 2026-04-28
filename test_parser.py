@@ -2,9 +2,8 @@
 try:
     with open('iraq_data.txt', 'r') as file:
         content = file.read()
-        print(content)
 
-        words = {}
+        words = content.split()
 
         # 2. ANALYZE AND TALLY (The Engine)
         word_counts = {} # Bucket 1: For the Themes (words longer than 8 letters)
@@ -38,7 +37,20 @@ try:
         sorted_years = sorted(year_counts.items(), key=lambda item:item[0])
 
         # 4. GENERATE THE PHYSICAL ASSET
-        
+        with open('physical_asset.txt', 'w') as report:
+
+            # Section 1: Themes
+            report.write("--- FREQUENCY ANALYSIS: TOP 5 THEMES ---\n\n")
+            for found_word, tally in sorted_themes[:5]:
+                report.write(f"TARGET: {found_word.upper()} | FREQUENCY: {tally}\n")
+
+            # Add a spacer
+            report.write("\n========================================\n\n")
+
+            # Section 2: Timeline
+            report.write("--- TIMELINE SUMMARY: EXTRACTED YEARS ---\n\n")
+            for year, tally in sorted_years:
+                report.write(f"YEAR: {year} | MENTIONS: {tally}\n")
 
 except FileNotFoundError:
     print("File not found.")
