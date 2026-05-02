@@ -35,6 +35,12 @@ def get_vedic_sign(total_degree):
     
 # --- TEST CASES ---
 # You can run these to make sure your engine is working!
-print(get_vedic_sign(140))
-print(get_vedic_sign(45.5))
-print(get_vedic_sign(355))
+print(get_vedic_sign(140)) # Expected: 20° Simha
+print(get_vedic_sign(45.5)) # Expected: 15.5° Vrishabha
+print(get_vedic_sign(355)) # Expected: 25° Meena
+
+# How to explain in an interview
+# "I developed a utility to transform continuous longitudinal data into discrete categories. I implemented a mapping algorithm 
+# using floor division and modulo arithmetic to normalize 360-degree coordinates into 30-degree segments. 
+# I chose to return the data in a Dictionary format to ensure the 'Sign' and 'Relative Degree' remained coupled, 
+# making the data easier for other parts of the application to consume."
