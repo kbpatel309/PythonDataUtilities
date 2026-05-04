@@ -44,3 +44,4 @@ print(get_vedic_sign(355)) # Expected: 25° Meena
 # using floor division and modulo arithmetic to normalize 360-degree coordinates into 30-degree segments. 
 # I chose to return the data in a Dictionary format to ensure the 'Sign' and 'Relative Degree' remained coupled, 
 # making the data easier for other parts of the application to consume."
+
