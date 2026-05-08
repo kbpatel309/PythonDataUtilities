@@ -25,3 +25,8 @@ def get_nakshatra(total_degree):
 # Test it with a degree
 print(get_nakshatra(0)) # Should be Ashwini
 print(get_nakshatra(140)) # Let's see where the 140 degree Leo lands
+
+# In my Nakshatra utility, I defined the 'width' as a calculated constant ( 360 / 27 )
+# rather than a hard-coded decimal. This ensures maximum floating-point precision
+# across the entire 360-degree range and makes the code easier to maintain if I were
+# to implement different divisional systems later.
