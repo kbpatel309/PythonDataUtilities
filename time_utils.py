@@ -7,7 +7,7 @@ def convert_to_utc(local_time_str, offset_hours):
     """
 
     # 1. Convert the string into a Python 'datetime' object
-    fmt = "%Y-%m-&d %H:%M"
+    fmt = "%Y-%m-%d %H:%M"
     local_dt = datetime.strptime(local_time_str, fmt)
 
     # 2. Adjust for the timezone offset
