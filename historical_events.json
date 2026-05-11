@@ -1,0 +1,18 @@
+[
+    {
+        "event_name": "Meiji Restoration",
+        "date": "1868-01-03",
+        "astrology": {
+            "zodiac_sign": "Sagittarius",
+            "nakshatra": "Mula"
+        }
+    },
+    {
+        "event_name": "Fall of Berlin Wall",
+        "date": "1989-11-09",
+        "astrology": {
+            "zodiac_sign": "Aquarius",
+            "nakshatra": "Shatabhisha"
+        }
+    }
+]
