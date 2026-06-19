@@ -35,6 +35,3 @@ def analyze_patterns():
 
 # Run the analysis
 analyze_patterns()
-
-
-
